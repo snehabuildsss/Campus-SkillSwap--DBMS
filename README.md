@@ -43,3 +43,11 @@ In progress — additional query verification, database views, testing, and repo
 
 ## Author
 Sneha Sharma
+
+
+## Live SQL Workspace
+
+Explore the Campus SkillSwap database and run its SQL queries in DB Fiddle.
+
+[Open Campus SkillSwap on DB Fiddle](https://www.db-fiddle.com/f/kiZy9ozJgKzhx8AzJA4bHQ/2)
+
