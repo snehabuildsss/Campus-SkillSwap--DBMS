@@ -91,3 +91,19 @@ INSERT INTO Reviews VALUES
 (2, 2, 4, 'Useful introduction to design'),
 (3, 3, 5, 'Great French practice'),
 (4, 5, 4, 'Helpful presentation tips');
+
+-- View: Display completed skill exchange sessions
+
+CREATE VIEW CompletedSessions AS
+SELECT
+    se.session_id,
+    teacher.student_name AS teacher_name,
+    sk.skill_name,
+    learner.student_name AS learner_name,
+    se.session_date
+FROM Sessions se
+JOIN Offers o ON se.offer_id = o.offer_id
+JOIN Students teacher ON o.student_id = teacher.student_id
+JOIN Skills sk ON o.skill_id = sk.skill_id
+JOIN Students learner ON se.learner_id = learner.student_id
+WHERE se.status = 'COMPLETED';
