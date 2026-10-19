@@ -51,3 +51,14 @@ Explore the Campus SkillSwap database and run its SQL queries in DB Fiddle.
 
 [Open Campus SkillSwap on DB Fiddle](https://www.db-fiddle.com/f/kiZy9ozJgKzhx8AzJA4bHQ/2)
 
+## Database Relationships
+
+The Campus SkillSwap database contains five related tables:
+
+- **Students → Offers:** One student can create multiple skill offers.
+- **Skills → Offers:** One skill can appear in multiple offers.
+- **Offers → Sessions:** One offer can be associated with multiple learning sessions.
+- **Students → Sessions:** A student can participate as a learner in multiple sessions.
+- **Sessions → Reviews:** A session can have at most one review.
+
+These relationships use primary keys and foreign keys to maintain referential integrity.
